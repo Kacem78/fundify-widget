@@ -45,7 +45,7 @@ $age = date( 'U' ) - get_post_time( 'U', true, $post );
 	
 								<div class="by_author"><?php printf( __( 'By %s', 'fundify' ), esc_attr( $campaign->author() ) ); ?></div>
 	
-							<?php echo get_excerpt_by_id($post->post_content); ?>
+							     <p><?php echo wp_trim_words( $post->post_content, $num_words = 35 ); ?> </p> 
 
 							<div class="post-meta campaign-meta">
 									<div class="location"><?php echo $campaign->location(); ?></div>
