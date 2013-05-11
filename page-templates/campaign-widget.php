@@ -7,23 +7,26 @@
  * @package Fundify
  * @since Fundify 1.0
  */
-
+ 
 get_header('widget'); 
 
 global $post;
 
-if (!isset($_REQUEST['ID'])) exit();
 
-if (isset($_REQUEST['ID'])) $ID = esc_attr($_REQUEST['ID']);
+$pageid = intval(get_query_var('pageid')); 
+if (!isset($pageid)) exit();
 			
-$post = get_post($ID);
+$post = get_post($pageid);
 if($post->post_type !== 'download') exit();
-
-//$post =   get_page_by_title ( 'i-tasbeeh', $output = OBJECT, $post_type = 'download' );
 
 $campaign = atcf_get_campaign( $post );
 
 $age = date( 'U' ) - get_post_time( 'U', true, $post );
+
+// echo atcf_create_permalink( 'widget', get_permalink() );
+ 
+
+
 
 ?>
 	<div id="content">
