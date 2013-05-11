@@ -9,7 +9,7 @@ if you don't use any fundify child theme
 
 copy the campaign-widget.php  to fundify->pages-template 
 copy the header-widget.php to the fundify root
-extract the function function get_excerpt_by_id($the_excerpt) from function.php and append it to the fundify function.php
+extract the content of function.php  and append it to the fundify function.php
 
 
 if you use a fundify child theme:
@@ -20,7 +20,7 @@ copy the function.php to your fundify child-thee root directoty
 
 
 go to admin panel,  
-create a new page,   name it widget or what ever name you want
+create a new page,   name it 'widget'
 select widget page from pages template
 update
 
@@ -28,6 +28,20 @@ update
 to test it, just add this line in any HTML 
 
 
-<iframe src="http://<your web site>/<widget page>/?ID=<you campaign ID>" target="_blank" style="border:0px  none; width: 100%; min-height: 100%;" name="widget" marginheight="0px" marginwidth="0px" frameborder="0" scrolling="yes"></iframe>
+<iframe src="http://<your web site>/your_campaign_id/widget/" target="_blank" style="border:0px  none; width: 100%; min-height: 100%;" name="widget" marginheight="0px" marginwidth="0px" frameborder="0" scrolling="yes"></iframe>
 
-this iframe is generated automatically from the theme, i will update the code later
+
+to generate the iframe automatically  insert this line in what ever program you want
+i did it in single-campaign.php
+
+<textarea name="share-widget" class="iframe notranslate"><iframe src="<?php echo get_site_url(); ?>/<?php echo the_ID(); ?>/widget/" style="border:0px  none; width: 100%; min-height: 100%;" name="widget" marginheight="0px" marginwidth="0px" frameborder="0" scrolling="yes" target="_blank"></iframe></textarea>
+
+you should also add an endpoint in permalink.php
+
+	add_rewrite_endpoint( 'widget', EP_ALL );
+	
+futur update:
+
+get the $wp_rewrite()function fired during the init() in crowdfunding.php 
+
+
