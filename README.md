@@ -34,7 +34,7 @@ to test it, just add this line in any HTML
 to generate the iframe automatically  insert this line in what ever program you want
 i did it in single-campaign.php
 
-<textarea name="share-widget" class="iframe notranslate"><iframe src="<?php echo get_site_url(); ?>/<?php echo the_ID(); ?>/widget/" style="border:0px  none; width: 100%; min-height: 100%;" name="widget" marginheight="0px" marginwidth="0px" frameborder="0" scrolling="yes" target="_blank"></iframe></textarea>
+@lt;textarea name="share-widget" class="iframe notranslate"><iframe src="<?php echo get_site_url(); ?>/<?php echo the_ID(); ?>/widget/" style="border:0px  none; width: 100%; min-height: 100%;" name="widget" marginheight="0px" marginwidth="0px" frameborder="0" scrolling="yes" target="_blank"></iframe></textarea@gt;
 
 you should also add an endpoint in permalink.php
 
