@@ -45,3 +45,8 @@ futur update:
 get the $wp_rewrite()function fired during the init() in crowdfunding.php 
 
 
+futur work:
+
+get the widget it own style so that it match the foreign site 
+
+
