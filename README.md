@@ -28,7 +28,7 @@ update
 to test it, just add this line in any HTML 
 
 
-<iframe src="http://<your web site>/your_campaign_id/widget/" target="_blank" style="border:0px  none; width: 100%; min-height: 100%;" name="widget" marginheight="0px" marginwidth="0px" frameborder="0" scrolling="yes"></iframe>
+&lt;iframe src="http://<your web site>/your_campaign_id/widget/" target="_blank" style="border:0px  none; width: 100%; min-height: 100%;" name="widget" marginheight="0px" marginwidth="0px" frameborder="0" scrolling="yes"></iframe&gt;
 
 
 to generate the iframe automatically  insert this line in what ever program you want
